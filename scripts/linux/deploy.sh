@@ -44,7 +44,7 @@ sudo cp tmp/bundle.tar.gz current/
 #   --rm \
 #   --volume=$APP_DIR/current/bundle/programs/server:/bundle \
 #   --entrypoint="/bin/bash" \
-#   iain17/meteord:binbuild -c \
+#   focuswebsolutions/meteord:binbuild -c \
 #     "cd /bundle && bash /opt/meteord/rebuild_npm_modules.sh"
 
 # sudo rm bundle.tar.gz
