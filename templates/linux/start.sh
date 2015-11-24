@@ -22,7 +22,7 @@ if [ "$USE_LOCAL_MONGO" == "1" ]; then
   docker run \
     -d \
     --restart=always \
-    -v /usr/share/:/usr/share/ \
+    -v /opt/docker/:/opt/docker/ \
     --publish=$PORT:80 \
     --volume=$BUNDLE_PATH:/bundle \
     --env-file=$ENV_FILE \
@@ -35,7 +35,7 @@ else
   docker run \
     -d \
     --restart=always \
-    -v /usr/share/:/usr/share/ \
+    -v /opt/docker/:/opt/docker/ \
     --publish=$PORT:80 \
     --volume=$BUNDLE_PATH:/bundle \
     --hostname="$HOSTNAME-$APPNAME" \
@@ -52,7 +52,7 @@ fi
   docker run \
     -d \
     --restart=always \
-    -v /usr/share/:/usr/share/ \
+    -v /opt/docker/:/opt/docker/ \
     --volume=/opt/$APPNAME/config/bundle.crt:/bundle.crt \
     --volume=/opt/$APPNAME/config/private.key:/private.key \
     --link=$APPNAME:backend \
