@@ -13,6 +13,7 @@ require('colors');
 require('../lib/update_notifier.js');
 
 console.log('\nMeteor Up: Production Quality Meteor Deployments'.bold.blue);
+console.log('\nEdited by Iain Munro'.bold.green);
 console.log('------------------------------------------------'.bold.blue);
 
 if (configFileName !== 'mup.json' || settingsFileName !== 'settings.json'){
