@@ -15,7 +15,7 @@ docker rm -f $APPNAME-frontend
 
 # We don't need to fail the deployment because of a docker hub downtime
 set +e
-docker pull focuswebsolutions/meteord
+docker pull iain17/meteord
 set -e
 
 if [ "$USE_LOCAL_MONGO" == "1" ]; then
@@ -30,7 +30,7 @@ if [ "$USE_LOCAL_MONGO" == "1" ]; then
     --hostname="$HOSTNAME-$APPNAME" \
     --env=MONGO_URL=mongodb://mongodb:27017/$APPNAME \
     --name=$APPNAME \
-    focuswebsolutions/meteord
+    iain17/meteord
 else
   docker run \
     -d \
@@ -41,7 +41,7 @@ else
     --hostname="$HOSTNAME-$APPNAME" \
     --env-file=$ENV_FILE \
     --name=$APPNAME \
-    focuswebsolutions/meteord
+    iain17/meteord
 fi
 
 <% if(typeof sslConfig === "object")  { %>
